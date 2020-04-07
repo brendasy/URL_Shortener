@@ -1,0 +1,25 @@
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Twemoji_1f517.svg/128px-Twemoji_1f517.svg.png"
+  alt="">
+
+<h1 class="cover-heading mt-4">Enter URL Here</h1>
+<i class="fa fa-arrow-down" style="font-size: 1.5em;"></i>
+<i class="fa fa-arrow-down" style="font-size: 1.5em;"></i>
+<i class="fa fa-arrow-down" style="font-size: 1.5em;"></i>
+
+
+<form action="/" method="POST" class="input-group my-3 mx-auto" style="width: 60vw;">
+  <input type="text" class="form-control" placeholder="http://" aria-label="URL" aria-describedby="button-addon2"
+    name="destination" {{#if oriUrl}}value="{{oriUrl}}" {{/if}} required>
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Send</button>
+  </div>
+</form>
+{{#if url}}
+  <i class="fa fa-arrow-down" style="font-size: 1.5em;"></i>
+
+  <a class="btn btn-block font-weight-light" data-toggle="tooltip" data-placement="bottom" title="click to copy"
+    id="copyClick" style="font-size: 1.5em;">{{url}}</a>
+
+  <input type="hidden" id="newUrl" value="{{url}}">
+
+{{/if}}
