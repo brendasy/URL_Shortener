@@ -36,7 +36,8 @@ router.get('/:code', (req, res) => {
     .then(url => {
       if (url) {
         res.redirect(url.destination)
-      } else {  //找不到相對代碼就導回首頁
+      }
+      else {  //找不到相對代碼就導回首頁
         res.redirect('/')
       }
     })
