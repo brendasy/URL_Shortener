@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-  var randomCode
+  let randomCode
   while (randomCode === undefined) {
     let tempCode
     tempCode = Math.random().toString(36).slice(-5) //產生五碼英數亂碼

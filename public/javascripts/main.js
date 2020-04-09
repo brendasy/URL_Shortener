@@ -7,7 +7,7 @@ if (copy) {
     newUrl.select()
 
     try {
-      var successful = document.execCommand('copy');
+      let successful = document.execCommand('copy');
 
     } catch (err) {
       alert('Oops, unable to copy');
